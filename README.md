@@ -1,3 +1,20 @@
+# Cookie Stand Admin
+## Lab 37 - 41
+### Maddie Amelia Lewis
+
+## Version
+
+**Version 1**
+- Creation of components folder
+- Creation of form 
+- Styling of main page
+
+**Version 2**
+
+**Version 3**
+
+**Version 4**
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
