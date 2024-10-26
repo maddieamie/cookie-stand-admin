@@ -10,6 +10,11 @@
 - Styling of main page
 
 **Version 2**
+- Form changed to CreateForm
+- Fake state in main app to update ReportTable
+- ReportTable app created
+- Data.js added
+- Index.js updated with CookieStandAdmin component
 
 **Version 3**
 

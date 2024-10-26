@@ -1,16 +1,20 @@
 // pages/index.js
-import Head from 'next/head'
+import Head from 'next/head';
+import Header from '../components/Header';
+import CreateForm from '../components/CreateForm';
+import ReportTable from '../components/ReportTable';
+import Footer from '../components/Footer';
 import { useState } from 'react'
-import Header from '../components/Header'
-import Form from '../components/Form'
-import Footer from '../components/Footer'
 
-export default function Home() {
-  const [lastCreated, setLastCreated] = useState(null)
+export default function CookieStandAdmin() {
+  const [reports, setReports] = useState([]);
+
+
 
   const handleFormSubmit = (formData) => {
-    setLastCreated(formData)
-  }
+    console.log("Form submitted with data:", formData);
+    setReports([...reports, formData]);
+  };
 
   return (
     <>
@@ -18,15 +22,13 @@ export default function Home() {
         <title>Cookie Stand Admin</title>
       </Head>
       <Header />
-      <main className="p-8 bg-green-100">
-        <Form onSubmit={handleFormSubmit} />
-        {lastCreated && (
-          <pre className="mt-4 bg-gray-100 p-4 rounded">
-            {JSON.stringify(lastCreated, null, 2)}
-          </pre>
-        )}
+
+      <main className="p-8">
+        <CreateForm onSubmit={handleFormSubmit}/>
+        <ReportTable reports={reports} />
       </main>
-      <Footer />
+
+      <Footer locations={reports.length} />
     </>
-  )
+  );
 }
